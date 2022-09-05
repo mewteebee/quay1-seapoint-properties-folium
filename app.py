@@ -10,16 +10,19 @@ ws = wb.worksheets[0]
 property_name = ws['A']
 latitude = ws['B']
 longitude = ws['C']
+pictures = ws['D']
 
 # pulling data from columns into lists 
 property_name_list = tuple_to_list(property_name)
 latitude_list = tuple_to_list(latitude)
 longitude_list = tuple_to_list(longitude)
+pictures_list = tuple_to_list(pictures)
 
 # data checks
 print(property_name_list)
 print(latitude_list)
 print(longitude_list)
+print(pictures)
 
 # instantiating map object 
 map = fl.Map(location=[-33.92714772961316, 18.41353385511342], zoom_start=13, tiles="Stamen Terrain")
